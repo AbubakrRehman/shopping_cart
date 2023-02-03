@@ -31,7 +31,7 @@ function Context({ children }) {
             console.log(json);
             products["name"]=json.title;
             products["price"]=json.price;
-            products["fashion"]=json.image;
+            products["fashion"]=json.thumbnail;
             products["id"]=json.id;
             products["Dept"]=json.category;
             products["inStock"]=json.stock?true:false;
