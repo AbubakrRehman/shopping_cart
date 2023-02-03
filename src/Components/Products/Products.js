@@ -7,15 +7,17 @@ import "./Products.css";
 function Products() {
     const {state,dispatch,filterState,filterDispatch}=CartState();
     const tranformProducts=()=>{
-         let products=state.products;
-           products =products.sort((a,b)=>{
+      console.log("pro k andar",state.products);
+         
+           let res =state.products.length ?state.products.sort((a,b)=>{
                 return filterState.order==="ascending"? a.price-b.price:b.price-a.price
-              });
-            products=products.filter((el,i)=>{
+              })
+              :[];
+            res=res.length? res.filter((el,i)=>{
               return filterState.inStock?el.inStock===filterState.inStock:true;
-            });
+            }):[]
 
-            return products;
+            return res;
 
     }
   return (

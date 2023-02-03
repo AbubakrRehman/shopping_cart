@@ -13,7 +13,7 @@ function Product({ product }) {
         <ul className="list-group list-group-flush">
           <li className="list-group-item"><img className='card-img-top' src={product.fashion} alt="" /></li>
           <li className="list-group-item">{product.name}</li>
-          <li className="list-group-item">Rs.{product.price.split(".")[0]}</li>
+          <li className="list-group-item">Rs.{product.price}</li>
           <li className="list-group-item">{
             [...Array(5)].map((item, index) => {
               return (

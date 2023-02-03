@@ -2,6 +2,9 @@
 
 const cartReducer = (state, action) => {
     switch (action.type) {
+        case "ADD_PRODUCTS":
+            console.log("added!!!!");
+            return { ...state, products:action.payload }
         case "ADD_TO_CART":
             console.log("added!!!!");
             return { ...state, cart: [...state.cart, action.payload] }
@@ -15,7 +18,7 @@ const cartReducer = (state, action) => {
         case "CHANGE_CART_QTY":
             return {
                 ...state, cart: state.cart.filter((item, index) => {
-                   return  item.id === action.payload.id ? item.qty = action.payload.qty : item.qty;
+                    return item.id === action.payload.id ? item.qty = action.payload.qty : item.qty;
                 })
             }
         default:
