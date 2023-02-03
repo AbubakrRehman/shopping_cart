@@ -15,11 +15,11 @@ root.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>
- 
-    <Context>
-      <App />
-    </Context>
-  
+
+  <Context>
+    <App />
+  </Context>
+
 
 );
 
